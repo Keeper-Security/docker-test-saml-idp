@@ -26,6 +26,13 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
     a2dissite 000-default.conf && \
     a2ensite simplesamlphp.conf
 
+RUN chmod o+r /var/www/simplesamlphp/config/config.php
+RUN chmod o+r /var/www/simplesamlphp/config/authsources.php
+RUN chmod o+r /var/www/simplesamlphp/metadata/saml20-sp-remote.php
+RUN chmod o+r /var/www/simplesamlphp/metadata/saml20-idp-hosted.php
+RUN chmod o+r /var/www/simplesamlphp/cert/server.crt
+RUN chmod o+r /var/www/simplesamlphp/cert/server.pem
+
 # Set work dir
 WORKDIR /var/www/simplesamlphp
 
