@@ -5,7 +5,7 @@
  * See: https://simplesamlphp.org/docs/stable/simplesamlphp-reference-sp-remote
  */
 
-$metadata['http://localhost:1511'] = array(
+$metadata['http://localhost:1511/'] = array(
     'AssertionConsumerService' => 'http://localhost:1511/authentication/check_login',
     'NameIDFormat' => 'urn:oasis:names:tc:SAML:2.0:nameid-format:persistent',
     'simplesaml.nameidattribute' => 'uid',

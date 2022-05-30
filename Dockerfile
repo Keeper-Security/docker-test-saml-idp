@@ -3,6 +3,7 @@ FROM php:7.1-apache
 # Utilities
 RUN apt-get update && \
     apt-get -y install apt-transport-https git curl vim libldap2-dev --no-install-recommends && \
+    docker-php-ext-install ldap && \
     rm -r /var/lib/apt/lists/*
 
 # SimpleSAMLphp
