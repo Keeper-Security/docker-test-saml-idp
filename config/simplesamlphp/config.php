@@ -260,7 +260,7 @@ $config = array(
      * In example when you are setting up a federation bridge.
      */
     'enable.saml20-idp' => true,
-    'enable.shib13-idp' => true,
+    'enable.shib13-idp' => false,
     'enable.adfs-idp' => false,
     'enable.wsfed-sp' => false,
     'enable.authmemcookie' => false,
@@ -289,7 +289,7 @@ $config = array(
      * This value is the duration of the session in seconds. Make sure that the time duration of
      * cookies both at the SP and the IdP exceeds this duration.
      */
-    'session.duration' => 8 * (60 * 60), // 8 hours.
+    'session.duration' => 5, // 5 seconds.
 
     /*
      * Sets the duration, in seconds, data should be stored in the datastore. As the datastore is used for

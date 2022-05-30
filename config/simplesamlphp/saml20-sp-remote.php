@@ -5,7 +5,9 @@
  * See: https://simplesamlphp.org/docs/stable/simplesamlphp-reference-sp-remote
  */
 
-$metadata[getenv('SIMPLESAMLPHP_SP_ENTITY_ID')] = array(
-    'AssertionConsumerService' => getenv('SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE'),
-    'SingleLogoutService' => getenv('SIMPLESAMLPHP_SP_SINGLE_LOGOUT_SERVICE'),
+$metadata['http://localhost:1511'] = array(
+    'AssertionConsumerService' => 'http://localhost:1511/authentication/check_login',
+    'NameIDFormat' => 'urn:oasis:names:tc:SAML:2.0:nameid-format:persistent',
+    'simplesaml.nameidattribute' => 'uid',
+    'simplesaml.attributes'      => true
 );
