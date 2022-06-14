@@ -11,3 +11,17 @@ $metadata['http://localhost:1511/'] = array(
     'simplesaml.nameidattribute' => 'uid',
     'simplesaml.attributes'      => true
 );
+
+$metadata['http://localhost/'] = array(
+    'AssertionConsumerService' => 'http://localhost/authentication/check_login',
+    'NameIDFormat' => 'urn:oasis:names:tc:SAML:2.0:nameid-format:persistent',
+    'simplesaml.nameidattribute' => 'uid',
+    'simplesaml.attributes'      => true
+);
+
+$metadata['https://localhost/'] = array(
+    'AssertionConsumerService' => 'https://localhost/authentication/check_login',
+    'NameIDFormat' => 'urn:oasis:names:tc:SAML:2.0:nameid-format:persistent',
+    'simplesaml.nameidattribute' => 'uid',
+    'simplesaml.attributes'      => true
+);
